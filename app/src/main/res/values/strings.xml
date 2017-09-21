@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Daily Toast</string>
+
+    <string name="daily_toast">Daily Toast</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="card1_title">Toast View Count!</string>\
+
+    <string name="card1_content">We are going see how to make a very simple Android app (in our case, a product inventory app) that will call a PHP script to perform basic CRUD(Create, Read, Update, Delete) operations.</string>
+
+    <string name="card1_author">Administrator</string>
+    <string name="read_more">Read More</string>
+    <string name="divider"></string>
+
+    <string name="home_string">Home</string>
+    <string name="category_string">Category</string>
+    <string name="account_string">Account</string>
+    <string name="about_string">About</string>
+    <string name="preferences_string">Preferences</string>
+    <string name="webpage_string">Visit Website</string>
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+    <string name="title_activity_post">PostActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_link_to_register">Not a member? Register now</string>
+    <string name="title_activity_Register">Register</string>
+    <string name="btn_link_to_login">Already a member? Login now</string>
+    <string name="acc_desc">Being logged in allows you to post your own Toasts into the blog feed. To create and post your own Toast, click on the button below. Remember to keep you credentials safe and never share your passkey to any person or admin from Daily Toast. You can log out by clicking the log out button below.</string>
+    <string name="btn_postToast">Post a Toast</string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_guest_continue"><u>Continue as Guest</u></string>
+    <string name="search_hint">Search a Toast</string>
+    <string name="title_activity_create">Create Toast</string>
+    <string name="btn_Post">Upload Toast</string>
+    <string name="category_spinner">Select one Category</string>
+
+
+</resources>

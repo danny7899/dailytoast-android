@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.danny7899.dailytoast" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.danny7899.dailytoast.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.danny7899.dailytoast.C2D_MESSAGE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/PostViewTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/home_string"
+            android:theme="@style/AppTheme" >
+
+            <!-- Added for Parse push notifications -->
+
+            <service android:name="com.parse.PushService" />
+
+            <receiver
+                android:name=".receiver.CustomPushReceiver"
+                android:exported="false">
+                <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                    <action android:name="android.intent.action.USER_PRESENT" />
+                    <action android:name="com.parse.push.intent.RECEIVE" />
+                    <action android:name="com.parse.push.intent.DELETE" />
+                    <action android:name="com.parse.push.intent.OPEN" />
+                </intent-filter>
+            </receiver>
+            <receiver
+                android:name="com.parse.GcmBroadcastReceiver"
+                android:permission="com.google.android.c2dm.permission.SEND">
+                <intent-filter>
+                    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                    <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                    <category android:name="com.danny7899.dailytoast.parsenotifications" />
+                </intent-filter>
+            </receiver>
+
+            <!-- /Added for Parse push notifications -->
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+        </activity>
+        <activity
+            android:name=".PostActivity"
+            android:label="@string/title_activity_post"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SplashTheme" >
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <!--
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <!--
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".PreferencesActivity"
+            android:label="@string/title_activity_preferences"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_Register"
+            android:launchMode="singleTop"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/PostViewTheme"
+            android:windowSoftInputMode="adjustPan" >
+            <!--
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+                -->
+        </activity>
+        <activity
+            android:name=".SearchResultsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" > <!-- to identify this activity as "searchable" -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".CreateActivity"
+            android:label="@string/title_activity_create"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/CreateTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.danny7899.dailytoast.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

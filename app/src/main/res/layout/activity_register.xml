@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        tools:context=".RegisterActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="50dp"
+            android:paddingTop="50dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:gravity="right"
+                android:src="@drawable/logo_image" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="@string/app_name"
+                    android:textColor="#FFF"
+                    android:textSize="35dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/web_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="www.dailytoast.dx.am"
+                    android:textColor="#fff"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#fff"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="#500"
+                android:textColorHint="#daa" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#fff"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="#500"
+                android:textColorHint="#daa" />
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#fff"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="#500"
+                android:textColorHint="#daa" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#fff"
+                android:fontFamily="sans-serif"
+                android:hint="Password"
+                android:padding="10dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="#500"
+                android:textColorHint="#daa" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="#fff"
+                android:text="@string/btn_login"
+                android:textColor="@color/background" />
+
+            <Button
+                android:id="@+id/btnLinkToLoginScreen"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@null"
+                android:text="@string/btn_link_to_login"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

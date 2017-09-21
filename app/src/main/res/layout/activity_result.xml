@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        tools:context=".PostActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/resultCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp"
+            android:scrollbars="vertical"
+            android:clipToPadding="false"
+            android:paddingBottom="10dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressSpinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:indeterminateTint="#FFF"
+        android:indeterminateTintMode="src_in"
+        android:layout_gravity="center" />
+</FrameLayout>

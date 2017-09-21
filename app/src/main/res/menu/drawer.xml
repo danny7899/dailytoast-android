@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_id">
+
+        <item
+            android:id="@+id/home_section"
+            android:checked="false"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/home_string" />
+
+        <item
+            android:id="@+id/category_section"
+            android:checked="false"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/category_string" />
+
+        <item
+            android:id="@+id/account_section"
+            android:checked="false"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/account_string" />
+
+        <item
+            android:id="@+id/webpage_section"
+            android:checked="false"
+            android:icon="@drawable/ic_web_black_24dp"
+            android:title="@string/webpage_string" />
+
+        <item
+            android:id="@+id/preferences_section"
+            android:checked="false"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/preferences_string" />
+
+        <item
+            android:id="@+id/about_section"
+            android:checked="false"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="@string/about_string" />
+
+    </group>
+</menu>
